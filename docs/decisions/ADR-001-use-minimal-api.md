@@ -1,4 +1,4 @@
-# ADR-001 Wybor technologii warstwy API
+# ADR-001 Wybór technologii warstwy API
 
 ## Status
 
@@ -8,15 +8,15 @@ Accepted
 
 ## Kontekst
 
-System wymaga warstwy API umozliwiajacej komunikacje z klientem poprzez HTTP.
+System wymaga warstwy API umożliwiającej komunikację z klientem poprzez HTTP.
 
-W projekcie wazne sa:
+W projekcie ważne są:
 
 - prostota implementacji
-- mala ilosc kodu konfiguracyjnego
-- szybkie rozpoczecie pracy nad funkcjonalnosciami
+- mała ilość kodu konfiguracyjnego
+- szybkie rozpoczęcie pracy nad funkcjonalnościami
 
-Rozwazano dwa podejscia dostepne w platformie .NET:
+Rozważano dwa podejścia dostępne w platformie .NET:
 
 - ASP.NET Core MVC (Controllers)
 - ASP.NET Core Minimal API
@@ -25,9 +25,9 @@ Rozwazano dwa podejscia dostepne w platformie .NET:
 
 ## Decyzja
 
-Projekt wykorzystuje **ASP.NET Core Minimal API** jako warstwe API.
+Projekt wykorzystuje **ASP.NET Core Minimal API** jako warstwę API.
 
-Minimal API pozwala definiowac endpointy HTTP w prosty sposob, bez koniecznosci tworzenia kontrolerow i dodatkowej konfiguracji. Dobrze wspiera niewielki system, w ktorym liczy sie szybkie dostarczanie funkcjonalnosci przy zachowaniu czytelnosci.
+Minimal API pozwala definiować endpointy HTTP w prosty sposób, bez konieczności tworzenia kontrolerów i dodatkowej konfiguracji. Dobrze wspiera niewielki system, w którym liczy się szybkie dostarczanie funkcjonalności przy zachowaniu czytelności.
 
 ---
 
@@ -35,34 +35,34 @@ Minimal API pozwala definiowac endpointy HTTP w prosty sposob, bez koniecznosci 
 
 ### ASP.NET Core MVC
 
-Klasyczne podejscie oparte na kontrolerach.
+Klasyczne podejście oparte na kontrolerach.
 
 Plusy:
 
 - dobrze znany wzorzec
-- czytelna struktura kontrolerow
+- czytelna struktura kontrolerów
 - szerokie wsparcie w ekosystemie
 
 Minusy:
 
-- wiecej kodu szablonowego
-- wieksza zlozonosc dla malego projektu
-- wolniejsze rozpoczecie implementacji
+- więcej kodu szablonowego
+- większa złożoność dla małego projektu
+- wolniejsze rozpoczęcie implementacji
 
 ### ASP.NET Core Minimal API
 
-Nowoczesne podejscie wprowadzone w .NET 6.
+Nowoczesne podejście wprowadzone w .NET 6.
 
 Plusy:
 
-- bardzo mala ilosc kodu
-- szybkie tworzenie endpointow
-- dobre dopasowanie do niewielkich projektow i prostych uslug
+- bardzo mała ilość kodu
+- szybkie tworzenie endpointów
+- dobre dopasowanie do niewielkich projektów i prostych usług
 
 Minusy:
 
-- mniejsza strukturalnosc w duzych projektach
-- przy rozbudowie systemu moze byc potrzebne przejscie do bardziej formalnej struktury
+- mniejsza strukturalność w dużych projektach
+- przy rozbudowie systemu może być potrzebne przejście do bardziej formalnej struktury
 
 ---
 
@@ -70,11 +70,11 @@ Minusy:
 
 Pozytywne:
 
-- prostsza implementacja endpointow
-- mniejsza ilosc kodu
-- szybsze rozpoczecie pracy nad funkcjonalnosciami
+- prostsza implementacja endpointów
+- mniejsza ilość kodu
+- szybsze rozpoczęcie pracy nad funkcjonalnościami
 
 Negatywne:
 
-- w przyszlosci moze byc potrzebna refaktoryzacja przy rozbudowie systemu
-- mniejsza strukturalnosc niz w przypadku MVC
+- w przyszłości może być potrzebna refaktoryzacja przy rozbudowie systemu
+- mniejsza strukturalność niż w przypadku MVC

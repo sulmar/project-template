@@ -1,10 +1,10 @@
-# Przeglad architektury
+# Przegląd architektury
 
-Ten dokument uzupelnij, gdy zespol rozumie juz pierwsze przypadki uzycia i podjal podstawowe decyzje o strukturze projektu.
+Ten dokument uzupełnij, gdy zespół rozumie już pierwsze przypadki użycia i podjął podstawowe decyzje o strukturze projektu.
 
 ## Styl architektury
 
-Opisz wybrane podejscie, np. prosty podzial warstwowy lub lekka Clean Architecture.
+Opisz wybrane podejście, np. prosty podział warstwowy lub lekką Clean Architecture.
 
 Warstwy:
 
@@ -13,9 +13,9 @@ Warstwy:
 - Domain
 - Infrastructure
 
-## Diagram zaleznosci
+## Diagram zależności
 
-Pokaz, kto od kogo zalezy. W szczegolnosci dopilnuj, aby opis i diagram nie byly ze soba sprzeczne.
+Pokaż, kto od kogo zależy. W szczególności dopilnuj, aby opis i diagram nie były ze sobą sprzeczne.
 
 Przyklad:
 
@@ -29,40 +29,40 @@ Przyklad:
 
 ### API
 
-Odpowiada za komunikacje z klientem i mapowanie zadan na przypadki uzycia.
+Odpowiada za komunikację z klientem i mapowanie żądań na przypadki użycia.
 
 ### Application
 
-Zawiera logike aplikacyjna i przeplywy use case.
+Zawiera logikę aplikacyjną i przepływy use case.
 
 Przyklady:
 
 - handlery,
 - komendy,
 - modele odpowiedzi,
-- kontrakty repozytoriow.
+- kontrakty repozytoriów.
 
 ### Domain
 
-Zawiera model domenowy i reguly biznesowe.
+Zawiera model domenowy i reguły biznesowe.
 
 Przyklady:
 
 - encje,
 - value objects,
 - enumy,
-- metody pilnujace invariantow.
+- metody pilnujące invariantów.
 
 ### Infrastructure
 
-Zawiera szczegoly techniczne.
+Zawiera szczegóły techniczne.
 
 Przyklady:
 
 - baza danych,
 - repozytoria,
-- integracje zewnetrzne.
+- integracje zewnętrzne.
 
 ## Uwagi
 
-Jesli projekt jest dopiero na poczatku, opisz architekture na tyle, by prowadzila zespol, ale nie dokladaj elementow, ktorych jeszcze realnie nie potrzebujecie.
+Jeśli projekt jest dopiero na początku, opisz architekturę na tyle, by prowadziła zespół, ale nie dokładaj elementów, których jeszcze realnie nie potrzebujecie.

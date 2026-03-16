@@ -1,14 +1,14 @@
 # Model domenowy
 
-Ten dokument warto uzupelnic po opisaniu pierwszych przypadkow uzycia. Ma pomagac uchwycic obiekty domenowe i reguly biznesowe, a nie byc tylko lista klas.
+Ten dokument warto uzupełnić po opisaniu pierwszych przypadków użycia. Ma pomagać uchwycić obiekty domenowe i reguły biznesowe, a nie być tylko listą klas.
 
 ## Opis domeny
 
-Krotki opis problemu biznesowego, ktory rozwiazuje system.
+Krótki opis problemu biznesowego, który rozwiązuje system.
 
 Przyklad:
 
-System sluzy do zarzadzania zamowieniami klientow w sklepie internetowym.
+System służy do zarządzania zamówieniami klientów w sklepie internetowym.
 
 ---
 
@@ -16,26 +16,26 @@ System sluzy do zarzadzania zamowieniami klientow w sklepie internetowym.
 
 ### EntityName
 
-Opis odpowiedzialnosci elementu domenowego.
+Opis odpowiedzialności elementu domenowego.
 
-Glowne atrybuty:
+Główne atrybuty:
 
 - `Id`
 - `Name`
 - `Status`
 
-Najwazniejsze reguly biznesowe:
+Najważniejsze reguły biznesowe:
 
-- regula 1
-- regula 2
+- reguła 1
+- reguła 2
 
 ---
 
 ### AnotherEntity
 
-Opis odpowiedzialnosci kolejnego elementu.
+Opis odpowiedzialności kolejnego elementu.
 
-Glowne atrybuty:
+Główne atrybuty:
 
 - `Id`
 - `OrderId`
@@ -46,7 +46,7 @@ Glowne atrybuty:
 
 ## Relacje
 
-Opisz zaleznosci pomiedzy encjami, value objects i enumami.
+Opisz zależności pomiędzy encjami, value objects i enumami.
 
 Przyklad:
 
@@ -55,4 +55,4 @@ Przyklad:
 
 ## Uwagi
 
-Jesli model jest jeszcze niepelny, warto to wprost zaznaczyc. Dokument ma odzwierciedlac aktualne rozumienie domeny, a nie udawac kompletne rozwiazanie.
+Jeśli model jest jeszcze niepełny, warto to wprost zaznaczyć. Dokument ma odzwierciedlać aktualne rozumienie domeny, a nie udawać kompletne rozwiązanie.

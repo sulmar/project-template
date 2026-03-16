@@ -1,26 +1,26 @@
-# UC-XX Nazwa przypadku uzycia
+# UC-XX Nazwa przypadku użycia
 
-Ten dokument warto uzupelnic zanim zespol zacznie implementacje. Ma opisac zachowanie systemu jezykiem funkcjonalnym, a nie technicznym.
+Ten dokument warto uzupełnić, zanim zespół zacznie implementację. Ma opisać zachowanie systemu językiem funkcjonalnym, a nie technicznym.
 
 ## Aktor
 
-Kto wykonuje akcje, np. klient, administrator lub system zewnetrzny.
+Kto wykonuje akcję, np. klient, administrator lub system zewnętrzny.
 
 ## Opis
 
-Krotki opis celu biznesowego scenariusza.
+Krótki opis celu biznesowego scenariusza.
 
-## Warunki wstepne
+## Warunki wstępne
 
 - warunek 1
 - warunek 2
 
-## Glowny scenariusz
+## Główny scenariusz
 
-1. Uzytkownik wykonuje akcje.
-2. System przyjmuje zadanie.
+1. Użytkownik wykonuje akcję.
+2. System przyjmuje żądanie.
 3. System waliduje dane.
-4. System wykonuje operacje.
+4. System wykonuje operację.
 5. System zwraca wynik.
 
 ## Rezultat
@@ -35,4 +35,4 @@ Metoda HTTP i endpoint, np.:
 
 ## Uwagi
 
-Dodatkowe informacje, ograniczenia albo informacja, czy scenariusz jest juz zaimplementowany w kodzie.
+Dodatkowe informacje, ograniczenia albo informacja, czy scenariusz jest już zaimplementowany w kodzie.

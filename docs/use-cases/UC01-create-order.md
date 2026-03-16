@@ -1,4 +1,4 @@
-# UC-01 Utworzenie zamowienia
+# UC-01 Utworzenie zamówienia
 
 ## Aktor
 
@@ -6,32 +6,32 @@ Klient
 
 ## Opis
 
-Klient tworzy nowe zamowienie w systemie.
+Klient tworzy nowe zamówienie w systemie.
 
-## Warunki wstepne
+## Warunki wstępne
 
 - klient przekazuje poprawny `CustomerId`,
-- zamowienie zawiera co najmniej jedna pozycje,
-- kazda pozycja ma `ProductId`, dodatnia ilosc i dodatnia cene.
+- zamówienie zawiera co najmniej jedną pozycję,
+- każda pozycja ma `ProductId`, dodatnią ilość i dodatnią cenę.
 
-## Glowny scenariusz
+## Główny scenariusz
 
-1. Klient wybiera produkty do zamowienia.
-2. Klient wysyla zadanie utworzenia zamowienia.
-3. System waliduje dane wejsciowe.
-4. System tworzy agregat zamowienia.
-5. System zapisuje zamowienie przez repozytorium.
-6. System zwraca identyfikator i status nowego zamowienia.
+1. Klient wybiera produkty do zamówienia.
+2. Klient wysyła żądanie utworzenia zamówienia.
+3. System waliduje dane wejściowe.
+4. System tworzy agregat zamówienia.
+5. System zapisuje zamówienie przez repozytorium.
+6. System zwraca identyfikator i status nowego zamówienia.
 
 ## Rezultat
 
-Zamowienie zostaje zapisane w systemie ze statusem `Created`.
+Zamówienie zostaje zapisane w systemie ze statusem `Created`.
 
 ## API
 
 `POST /orders`
 
-Przykladowe pola zadania:
+Przykładowe pola żądania:
 
 - `customerId`
 - `items[].productId`
@@ -40,4 +40,4 @@ Przykladowe pola zadania:
 
 ## Uwagi
 
-To jest przypadek uzycia zaimplementowany w aktualnej wersji systemu.
+To jest przypadek użycia zaimplementowany w aktualnej wersji systemu.

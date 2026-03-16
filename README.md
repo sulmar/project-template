@@ -1,12 +1,12 @@
 # Order Management Service
 
-**Order Management Service** to prosta usluga HTTP do obslugi zamowien klientow. System pozwala utworzyc zamowienie, przechowuje jego podstawowe dane oraz utrzymuje reguly biznesowe zwiazane z cyklem zycia zamowienia. Projekt laczy dokumentacje architektoniczna, model domenowy, implementacje aplikacyjna i testy, tak aby cala sciezka od wymagania do kodu byla czytelna i spojna.
+**Order Management Service** to prosta usługa HTTP do obsługi zamówień klientów. System pozwala utworzyć zamówienie, przechowuje jego podstawowe dane oraz utrzymuje reguły biznesowe związane z cyklem życia zamówienia. Projekt łączy dokumentację architektoniczną, model domenowy, implementację aplikacyjną i testy, tak aby cała ścieżka od wymagania do kodu była czytelna i spójna.
 
-Repozytorium pokazuje spojny punkt startowy dla projektu .NET:
+Repozytorium pokazuje spójny punkt startowy dla projektu .NET:
 
 - dokumentacja prowadzi od problemu do decyzji projektowych,
-- kod zawiera minimalny pionowy wycinek funkcjonalnosci,
-- testy sa elementem podstawowego workflow.
+- kod zawiera minimalny pionowy wycinek funkcjonalności,
+- testy są elementem podstawowego workflow.
 
 ## Stos technologiczny
 
@@ -32,10 +32,10 @@ dotnet run --project src/Api/ProjectTemplate.Api.csproj
 
 ```text
 src/
-  Api/             minimal API i kompozycja zaleznosci
-  Application/     przypadki uzycia i kontrakty
-  Domain/          model domenowy i reguly biznesowe
-  Infrastructure/  szczegoly techniczne
+  Api/             minimal API i kompozycja zależności
+  Application/     przypadki użycia i kontrakty
+  Domain/          model domenowy i reguły biznesowe
+  Infrastructure/  szczegóły techniczne
 docs/
   use-cases/       scenariusze funkcjonalne
   architecture/    opis struktury systemu
@@ -43,12 +43,12 @@ docs/
   decisions/       ADR-y
 tests/
   UnitTests/       szybkie testy logiki
-  IntegrationTests/ testy endpointow i skladania aplikacji
+  IntegrationTests/ testy endpointów i składania aplikacji
 ```
 
-## Sugerowany workflow dla zespolu
+## Sugerowany workflow dla zespołu
 
-1. Opisz przypadek uzycia.
+1. Opisz przypadek użycia.
 2. Ustal model domenowy i ogranicz zakres pierwszej implementacji.
 3. Zapisz istotne decyzje w ADR.
 4. Dodaj test jednostkowy lub integracyjny.
@@ -56,8 +56,8 @@ tests/
 
 ## Autorzy
 
-Do uzupelnienia.
+Do uzupełnienia.
 
 ## Licencja
 
-Projekt jest udostepniany na licencji `MIT`, ktora pozwala na swobodne uzywanie, modyfikowanie i rozpowszechnianie oprogramowania przy zachowaniu informacji o autorstwie i licencji.
+Projekt jest udostępniany na licencji `MIT`, która pozwala na swobodne używanie, modyfikowanie i rozpowszechnianie oprogramowania przy zachowaniu informacji o autorstwie i licencji.

@@ -1,18 +1,18 @@
-# Zarzadzanie zamowieniami
+# Zarządzanie zamówieniami
 
-Ten katalog opisuje niewielki, ale spojny system. Celem nie jest kompletna realizacja wszystkich funkcji, tylko pokazanie uporzadkowanego fundamentu: od przypadku uzycia i modelu domenowego po implementacje i testy.
+Ten katalog opisuje niewielki, ale spójny system. Celem nie jest kompletna realizacja wszystkich funkcji, tylko pokazanie uporządkowanego fundamentu: od przypadku użycia i modelu domenowego po implementację i testy.
 
 ---
 
 ## Cel projektu
 
-Szablon ma pokazac:
+Szablon ma pokazać:
 
-- podejscie **Use Case Driven Development**,
+- podejście **Use Case Driven Development**,
 - podstawy **modelowania domenowego**,
-- prosty podzial na warstwy w .NET,
+- prosty podział na warstwy w .NET,
 - dokumentowanie decyzji projektowych,
-- laczenie dokumentacji z kodem i testami.
+- łączenie dokumentacji z kodem i testami.
 
 ---
 
@@ -20,15 +20,15 @@ Szablon ma pokazac:
 
 Kod implementuje jeden referencyjny pionowy wycinek:
 
-- **UC-01 Utworzenie zamowienia**
+- **UC-01 Utworzenie zamówienia**
 
-Drugi przypadek uzycia w `docs/use-cases/UC02-cancel-order.md` zostal pozostawiony jako przyklad dalszego rozwoju projektu.
+Drugi przypadek użycia w `docs/use-cases/UC02-cancel-order.md` został pozostawiony jako przykład dalszego rozwoju projektu.
 
 ---
 
-## Jak czytac projekt
+## Jak czytać projekt
 
-Najlepiej przejsc po nim w tej kolejnosci:
+Najlepiej przejść po nim w tej kolejności:
 
 1. `docs/use-cases/UC01-create-order.md`
 2. `docs/domain/domain-model.md`
@@ -36,19 +36,19 @@ Najlepiej przejsc po nim w tej kolejnosci:
 4. `docs/decisions/`
 5. `src/` i `tests/`
 
-Dzieki temu latwo przejsc od dokumentacji do implementacji.
+Dzięki temu łatwo przejść od dokumentacji do implementacji.
 
 ---
 
 ## Architektura
 
-Projekt wykorzystuje prosty podzial na warstwy:
+Projekt wykorzystuje prosty podział na warstwy:
 
 `API -> Application -> Domain`
 
 Warstwa `Infrastructure` implementuje kontrakty potrzebne aplikacji, ale nie zawiera logiki biznesowej.
 
-Szczegoly znajduja sie w:
+Szczegóły znajdują się w:
 
 `docs/architecture/overview.md`
 
@@ -56,13 +56,13 @@ Szczegoly znajduja sie w:
 
 ## Model domenowy
 
-Glowne elementy przykladu:
+Główne elementy przykładu:
 
 - `Order`
 - `OrderItem`
 - `OrderStatus`
 
-Szczegoly znajduja sie w:
+Szczegóły znajdują się w:
 
 `docs/domain/domain-model.md`
 
@@ -70,11 +70,11 @@ Szczegoly znajduja sie w:
 
 ## Decyzje architektoniczne
 
-Kluczowe decyzje projektowe sa dokumentowane w katalogu:
+Kluczowe decyzje projektowe są dokumentowane w katalogu:
 
 `docs/decisions`
 
-Dokumentacja obejmuje tylko decyzje bazowe. Bardziej zaawansowane elementy warto dodawac dopiero wtedy, gdy wynikaja z realnych potrzeb.
+Dokumentacja obejmuje tylko decyzje bazowe. Bardziej zaawansowane elementy warto dodawać dopiero wtedy, gdy wynikają z realnych potrzeb.
 
 ---
 
@@ -97,10 +97,10 @@ dotnet run --project ../src/Api/ProjectTemplate.Api.csproj
 
 ## Zasady pracy
 
-Przy pierwszych iteracjach warto pilnowac zasady:
+Przy pierwszych iteracjach warto pilnować zasady:
 
 - najpierw use case,
 - potem model i decyzje,
 - potem test,
-- na koncu implementacja.
+- na końcu implementacja.
 

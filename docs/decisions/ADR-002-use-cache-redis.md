@@ -8,17 +8,17 @@ Proposed
 
 ## Kontekst
 
-W miare rozwoju projektu odczyt danych moze stawac sie coraz czestszy, a glowna baza danych moze zaczac obslugiwac zbyt duzo zapytan.
+W miarę rozwoju projektu odczyt danych może stawać się coraz częstszy, a główna baza danych może zacząć obsługiwać zbyt dużo zapytań.
 
-Taka sytuacja moze dotyczyc miedzy innymi:
+Taka sytuacja może dotyczyć między innymi:
 
-- list zamowien,
-- szczegolow zamowienia,
-- danych tymczasowych wykorzystywanych przez aplikacje.
+- list zamówień,
+- szczegółów zamówienia,
+- danych tymczasowych wykorzystywanych przez aplikację.
 
-Na obecnym etapie nie ma jeszcze potrzeby wprowadzania dodatkowej infrastruktury, ale taka decyzja moze pojawic sie w dalszym rozwoju systemu.
+Na obecnym etapie nie ma jeszcze potrzeby wprowadzania dodatkowej infrastruktury, ale taka decyzja może pojawić się w dalszym rozwoju systemu.
 
-Rozwazano dwa podejscia:
+Rozważano dwa podejścia:
 
 - brak warstwy cache,
 - wykorzystanie Redis jako warstwy cache.
@@ -27,9 +27,9 @@ Rozwazano dwa podejscia:
 
 ## Decyzja
 
-Na obecnym etapie **nie wdrazamy Redis**, ale traktujemy go jako sensowna **propozycje** dla bardziej rozbudowanej wersji systemu.
+Na obecnym etapie **nie wdrażamy Redis**, ale traktujemy go jako sensowną **propozycję** dla bardziej rozbudowanej wersji systemu.
 
-Jesli w kolejnych iteracjach pojawia sie problemy wydajnosciowe lub potrzeba przechowywania danych tymczasowych, Redis moze zostac zaakceptowany jako osobna warstwa cache.
+Jeśli w kolejnych iteracjach pojawią się problemy wydajnościowe lub potrzeba przechowywania danych tymczasowych, Redis może zostać zaakceptowany jako osobna warstwa cache.
 
 ---
 
@@ -37,18 +37,18 @@ Jesli w kolejnych iteracjach pojawia sie problemy wydajnosciowe lub potrzeba prz
 
 ### Brak cache
 
-System korzysta wylacznie z glownej bazy danych.
+System korzysta wyłącznie z głównej bazy danych.
 
 Plusy:
 
 - prostsza architektura,
 - brak dodatkowej infrastruktury,
-- latwiejsze utrzymanie rozwiazania.
+- łatwiejsze utrzymanie rozwiązania.
 
 Minusy:
 
-- wieksze obciazenie bazy danych,
-- wolniejsze odczyty przy duzej liczbie zapytan.
+- większe obciążenie bazy danych,
+- wolniejsze odczyty przy dużej liczbie zapytań.
 
 ### Redis
 
@@ -56,15 +56,15 @@ Dodatkowa warstwa cache oparta o Redis.
 
 Plusy:
 
-- bardzo szybki dostep do danych,
-- zmniejszenie obciazenia bazy danych,
-- dobry przyklad rozwiazania spotykanego w wiekszych systemach.
+- bardzo szybki dostęp do danych,
+- zmniejszenie obciążenia bazy danych,
+- dobry przykład rozwiązania spotykanego w większych systemach.
 
 Minusy:
 
 - dodatkowa infrastruktura do utrzymania,
-- wieksza zlozonosc architektury,
-- koniecznosc przemyslenia strategii wygaszania i synchronizacji danych.
+- większa złożoność architektury,
+- konieczność przemyślenia strategii wygaszania i synchronizacji danych.
 
 ---
 
@@ -74,9 +74,9 @@ Pozytywne:
 
 - obecna architektura pozostaje prosta,
 - decyzja jest udokumentowana z wyprzedzeniem,
-- zespol ma gotowy punkt wyjscia do rozmowy o skalowaniu systemu.
+- zespół ma gotowy punkt wyjścia do rozmowy o skalowaniu systemu.
 
 Negatywne:
 
 - obecna wersja systemu nie pokazuje implementacji cache,
-- moze byc potrzebny osobny ADR lub aktualizacja tego dokumentu po rzeczywistym wdrozeniu Redis.
+- może być potrzebny osobny ADR lub aktualizacja tego dokumentu po rzeczywistym wdrożeniu Redis.

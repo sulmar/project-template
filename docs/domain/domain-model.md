@@ -2,9 +2,9 @@
 
 ## Opis domeny
 
-Przyklad dotyczy prostego systemu do zarzadzania zamowieniami klientow. Obecna implementacja obejmuje pierwszy pionowy wycinek: utworzenie zamowienia.
+Przykład dotyczy prostego systemu do zarządzania zamówieniami klientów. Obecna implementacja obejmuje pierwszy pionowy wycinek: utworzenie zamówienia.
 
-Kazde zamowienie sklada sie z jednej lub wielu pozycji. Na potrzeby prostego startu dane produktu sa przechowywane bezposrednio w pozycji zamowienia przez `ProductId` i `UnitPrice`.
+Każde zamówienie składa się z jednej lub wielu pozycji. Na potrzeby prostego startu dane produktu są przechowywane bezpośrednio w pozycji zamówienia przez `ProductId` i `UnitPrice`.
 
 ---
 
@@ -41,15 +41,15 @@ classDiagram
 
 ### Order
 
-Agregat reprezentujacy zamowienie klienta.
+Agregat reprezentujący zamówienie klienta.
 
 Odpowiada za:
 
-- utworzenie poprawnego zamowienia,
+- utworzenie poprawnego zamówienia,
 - przechowanie listy pozycji,
-- pilnowanie statusu zamowienia.
+- pilnowanie statusu zamówienia.
 
-Glowne atrybuty:
+Główne atrybuty:
 
 - `Id`
 - `CustomerId`
@@ -59,19 +59,19 @@ Glowne atrybuty:
 
 ### OrderItem
 
-Pojedyncza pozycja zamowienia.
+Pojedyncza pozycja zamówienia.
 
-Glowne atrybuty:
+Główne atrybuty:
 
 - `ProductId`
 - `Quantity`
 - `UnitPrice`
 
-W obecnej wersji pozycja zawiera dane wystarczajace do opisania logiki biznesowej bez budowania osobnego modulu katalogu produktow.
+W obecnej wersji pozycja zawiera dane wystarczające do opisania logiki biznesowej bez budowania osobnego modułu katalogu produktów.
 
 ### OrderStatus
 
-Prosty enum opisujacy stan zamowienia:
+Prosty enum opisujący stan zamówienia:
 
 - `Created`
 - `Cancelled`
@@ -88,7 +88,7 @@ Prosty enum opisujacy stan zamowienia:
 
 ## Zasady biznesowe
 
-- zamowienie musi miec klienta,
-- zamowienie musi miec co najmniej jedna pozycje,
-- ilosc i cena w pozycji musza byc wieksze od zera,
-- wyslanego zamowienia nie mozna anulowac.
+- zamówienie musi mieć klienta,
+- zamówienie musi mieć co najmniej jedną pozycję,
+- ilość i cena w pozycji muszą być większe od zera,
+- wysłanego zamówienia nie można anulować.

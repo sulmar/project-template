@@ -1,6 +1,6 @@
-# ADR-XXX Tytul decyzji
+# ADR-XXX Tytuł decyzji
 
-Ten dokument uzupelnij wtedy, gdy zespol podejmuje decyzje, ktora bedzie wplywac na sposob implementacji, architekture albo organizacje pracy.
+Ten dokument uzupełnij wtedy, gdy zespół podejmuje decyzję, która będzie wpływać na sposób implementacji, architekturę albo organizację pracy.
 
 ## Status
 
@@ -10,30 +10,30 @@ Ten dokument uzupelnij wtedy, gdy zespol podejmuje decyzje, ktora bedzie wplywac
 
 ## Kontekst
 
-Opis problemu lub sytuacji, ktora wymaga podjecia decyzji.
+Opis problemu lub sytuacji, która wymaga podjęcia decyzji.
 
-Warto odpowiedziec na pytania:
+Warto odpowiedzieć na pytania:
 
-- Jaki problem rozwiazujemy?
-- Dlaczego musimy podjac decyzje?
-- Jakie sa ograniczenia techniczne, biznesowe lub organizacyjne?
+- Jaki problem rozwiązujemy?
+- Dlaczego musimy podjąć decyzję?
+- Jakie są ograniczenia techniczne, biznesowe lub organizacyjne?
 
 ---
 
 ## Decyzja
 
-Opis podjetej decyzji.
+Opis podjętej decyzji.
 
 
 ---
 
 ## Alternatywy
 
-Mozliwe inne rozwiazania, ktore zostaly rozwazone.
+Możliwe inne rozwiązania, które zostały rozważone.
 
 ### Opcja 1
 
-Opis rozwiazania.
+Opis rozwiązania.
 
 Plusy:
 
@@ -47,7 +47,7 @@ Minusy:
 
 ### Opcja 2
 
-Opis rozwiazania.
+Opis rozwiązania.
 
 Plusy:
 
@@ -61,7 +61,7 @@ Minusy:
 
 ## Konsekwencje
 
-Jakie skutki bedzie miala ta decyzja.
+Jakie skutki będzie miała ta decyzja.
 
 Pozytywne:
 

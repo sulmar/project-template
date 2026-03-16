@@ -1,25 +1,25 @@
-# Przeglad architektury systemu
+# Przegląd architektury systemu
 
 ## Cel systemu
 
-System pokazuje minimalny, ale dzialajacy przyklad projektu warstwowego w .NET. Celem jest zachowanie czytelnego przeplywu od przypadku uzycia do implementacji bez nadmiernej zlozonosci.
+System pokazuje minimalny, ale działający przykład projektu warstwowego w .NET. Celem jest zachowanie czytelnego przepływu od przypadku użycia do implementacji bez nadmiernej złożoności.
 
 ---
 
 ## Styl architektury
 
-Szablon korzysta z lekkiego podejscia inspirowanego **Clean Architecture**:
+Szablon korzysta z lekkiego podejścia inspirowanego **Clean Architecture**:
 
 - logika biznesowa pozostaje w `Domain`,
-- przypadki uzycia sa realizowane w `Application`,
-- `Api` sklada aplikacje i wystawia endpointy,
-- `Infrastructure` implementuje szczegoly techniczne.
+- przypadki użycia są realizowane w `Application`,
+- `Api` składa aplikację i wystawia endpointy,
+- `Infrastructure` implementuje szczegóły techniczne.
 
-Najwazniejsza zasada: logika biznesowa nie powinna zalezec od szczegolow infrastruktury.
+Najważniejsza zasada: logika biznesowa nie powinna zależeć od szczegółów infrastruktury.
 
 ---
 
-## Diagram zaleznosci
+## Diagram zależności
 
 ```mermaid
 flowchart LR
@@ -32,13 +32,13 @@ flowchart LR
     Infrastructure --> InMemoryStore[InMemoryStore]
 ```
 
-W tym ukladzie `Api` zna warstwe `Infrastructure`, bo to tutaj odbywa sie kompozycja zaleznosci. `Domain` nie zalezy od `Infrastructure`.
+W tym układzie `Api` zna warstwę `Infrastructure`, bo to tutaj odbywa się kompozycja zależności. `Domain` nie zależy od `Infrastructure`.
 
 ---
 
 ## Mapowanie dokumentacji na kod
 
-Referencyjny przeplyw dla `UC-01` wyglada tak:
+Referencyjny przepływ dla `UC-01` wygląda tak:
 
 ```mermaid
 flowchart LR
@@ -51,7 +51,7 @@ flowchart LR
     Endpoint --> IntegrationTests[IntegrationTests]
 ```
 
-To jest podstawowy wzorzec przeplywu dla aktualnej implementacji.
+To jest podstawowy wzorzec przepływu dla aktualnej implementacji.
 
 ---
 
@@ -64,22 +64,22 @@ Warstwa komunikacji z klientem.
 Zawiera:
 
 - endpointy HTTP,
-- mapowanie zadan na przypadki uzycia,
-- skladanie zaleznosci.
+- mapowanie żądań na przypadki użycia,
+- składanie zależności.
 
 ### Application
 
-Warstwa realizujaca przypadki uzycia systemu.
+Warstwa realizująca przypadki użycia systemu.
 
 Zawiera:
 
 - komendy i modele odpowiedzi,
 - handlery use case,
-- kontrakty potrzebne do wspolpracy z infrastruktura.
+- kontrakty potrzebne do współpracy z infrastrukturą.
 
 ### Domain
 
-Warstwa modelu domenowego i reguly biznesowych.
+Warstwa modelu domenowego i reguł biznesowych.
 
 Zawiera:
 
@@ -89,6 +89,6 @@ Zawiera:
 
 ### Infrastructure
 
-Warstwa szczegolow technicznych.
+Warstwa szczegółów technicznych.
 
-Obecnie zawiera prosta implementacje repozytorium w pamieci. To pozwala utrzymac niski poziom zlozonosci przy zachowaniu czytelnej struktury.
+Obecnie zawiera prostą implementację repozytorium w pamięci. To pozwala utrzymać niski poziom złożoności przy zachowaniu czytelnej struktury.

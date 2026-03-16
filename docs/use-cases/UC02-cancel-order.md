@@ -1,4 +1,4 @@
-# UC-02 Anulowanie zamowienia
+# UC-02 Anulowanie zamówienia
 
 ## Aktor
 
@@ -6,23 +6,23 @@ Klient
 
 ## Opis
 
-Klient anuluje istniejace zamowienie w systemie.
+Klient anuluje istniejące zamówienie w systemie.
 
-## Warunki wstepne
+## Warunki wstępne
 
-- zamowienie istnieje w systemie,
-- status zamowienia nie jest rowny `Shipped`.
+- zamówienie istnieje w systemie,
+- status zamówienia nie jest równy `Shipped`.
 
-## Glowny scenariusz
+## Główny scenariusz
 
-1. Klient wybiera zamowienie.
-2. Klient wysyla zadanie anulowania zamowienia.
-3. System odczytuje zamowienie i sprawdza jego status.
+1. Klient wybiera zamówienie.
+2. Klient wysyła żądanie anulowania zamówienia.
+3. System odczytuje zamówienie i sprawdza jego status.
 4. System zmienia status na `Cancelled`.
 
 ## Rezultat
 
-Status zamowienia zostaje zmieniony na `Cancelled`.
+Status zamówienia zostaje zmieniony na `Cancelled`.
 
 ## API
 
@@ -30,4 +30,4 @@ Status zamowienia zostaje zmieniony na `Cancelled`.
 
 ## Uwagi
 
-Ten przypadek uzycia pozostaje jako przyklad kolejnego kroku rozwoju projektu. Model domenowy zawiera juz regule biznesowa potrzebna do takiej funkcji, ale endpoint i przeplyw aplikacyjny nie sa jeszcze zaimplementowane.
+Ten przypadek użycia pozostaje jako przykład kolejnego kroku rozwoju projektu. Model domenowy zawiera już regułę biznesową potrzebną do takiej funkcji, ale endpoint i przepływ aplikacyjny nie są jeszcze zaimplementowane.
