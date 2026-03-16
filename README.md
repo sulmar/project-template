@@ -1,5 +1,7 @@
 # Order Management Service
 
+*Ten szablon projektu pokazuje w prosty i praktyczny sposób, jak zaprojektować aplikację zgodnie z zasadami **Clean Architecture**, zaczynając od przypadków użycia i modelu domenowego, a kończąc na implementacji i testach.*
+
 **Order Management Service** to prosta usługa HTTP do obsługi zamówień klientów. System pozwala utworzyć zamówienie, przechowuje jego podstawowe dane oraz utrzymuje reguły biznesowe związane z cyklem życia zamówienia. Projekt łączy dokumentację architektoniczną, model domenowy, implementację aplikacyjną i testy, tak aby cała ścieżka od wymagania do kodu była czytelna i spójna.
 
 Repozytorium pokazuje spójny punkt startowy dla projektu .NET:
