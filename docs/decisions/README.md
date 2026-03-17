@@ -1,6 +1,6 @@
 # Decyzje architektoniczne (ADR)
 
-ADR (Architecture Decision Record) to krótki dokument opisujący decyzję architektoniczną w projekcie, np.:
+**ADR (Architecture Decision Record)** to krótki dokument opisujący decyzję architektoniczną w projekcie, np.:
 - dlaczego wybrano Redis zamiast PostgreSQL do cache,
 - dlaczego użyto gRPC zamiast REST,
 - dlaczego wybrano RabbitMQ zamiast Kafka.
