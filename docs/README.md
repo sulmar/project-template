@@ -23,6 +23,22 @@ docs/domain
 - [Diagram komponentów](architecture/overview.md#diagram-komponentów)
 - [Mapowanie dokumentacji na kod](architecture/overview.md#mapowanie-dokumentacji-na-kod)
 
+## W jaki sposób wygenerować diagram w formacie mermaid w postaci PDF
+Zakładając, że masz zainstalowany **Node.js** oraz plik **`plik.md`** z diagramem:
+
+1. **Zainstaluj narzędzie `mmdc` globalnie:**
+
+```bash
+npm install -g @mermaid-js/mermaid-cli
+```
+
+2. **Wygeneruj PDF z diagramu:**
+
+```bash
+mmdc -i plik.md -o diagram.pdf
+```
+
+
 ## Kiedy dodać diagram
 
 Wystarczy pięć diagramów. Każdy pojawia się wtedy, gdy tekst przestaje pokazywać relację, przepływ albo regułę.
