@@ -34,6 +34,36 @@ flowchart LR
 
 W tym układzie `Api` zna warstwę `Infrastructure`, bo to tutaj odbywa się kompozycja zależności. `Domain` nie zależy od `Infrastructure`.
 
+## Diagram komponentów
+
+Aktualny wycinek implementacji: jeden endpoint, jeden handler i repozytorium w pamięci.
+
+```mermaid
+flowchart TB
+    subgraph Api
+        PostOrders["POST /orders"]
+    end
+    subgraph Application
+        Handler[CreateOrderHandler]
+        Port[IOrderRepository]
+    end
+    subgraph Domain
+        Order[Order]
+        OrderItem[OrderItem]
+        OrderStatus[OrderStatus]
+    end
+    subgraph Infrastructure
+        Memory[InMemoryOrderRepository]
+    end
+    PostOrders --> Handler
+    Handler --> Order
+    Handler --> Port
+    Order --> OrderItem
+    Order --> OrderStatus
+    Memory -.->|implementuje| Port
+    Memory --> Order
+```
+
 ---
 
 ## Mapowanie dokumentacji na kod

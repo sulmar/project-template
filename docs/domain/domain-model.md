@@ -13,26 +13,43 @@ Każde zamówienie składa się z jednej lub wielu pozycji. Na potrzeby prostego
 ```mermaid
 classDiagram
     class Order {
-        Id
-        CustomerId
-        CreatedAtUtc
-        Status
+        <<aggregate>>
+        +Guid Id
+        +Guid CustomerId
+        +DateTime CreatedAtUtc
+        +OrderStatus Status
+        +IReadOnlyCollection~OrderItem~ Items
+        +Create(customerId, items, createdAtUtc)$ Order
+        +Cancel() void
     }
 
     class OrderItem {
-        ProductId
-        Quantity
-        UnitPrice
+        +Guid ProductId
+        +int Quantity
+        +decimal UnitPrice
     }
 
     class OrderStatus {
+        <<enumeration>>
         Created
         Cancelled
         Shipped
     }
 
-    Order "1" --> "many" OrderItem
-    Order --> OrderStatus
+    Order "1" *-- "1..*" OrderItem : Items
+    Order --> OrderStatus : Status
+```
+
+## Diagram stanów
+
+`Shipped` jest w enumie i w warunku `Cancel()`, ale żadna metoda jeszcze go nie ustawia. `Cancel()` nie sprawdza, czy zamówienie jest już anulowane, więc ponowne wywołanie zostawia status `Cancelled`.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Created : Order.Create
+    Created --> Cancelled : Cancel()
+    Cancelled --> Cancelled : Cancel()
+    Shipped --> Shipped : anulowanie zabronione
 ```
 
 ---
