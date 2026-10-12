@@ -12,6 +12,17 @@ docs/domain
 ## Decyzje architektoniczne
 - docs/decisions
 
+## Diagramy UML stosowane w dokumentacji
+
+- [Mapa przypadków użycia](use-cases/README.md#mapa-przypadków-użycia)
+- [Diagram sekwencji, UC-01](use-cases/UC01-create-order.md#diagram-sekwencji)
+- [Diagram sekwencji, UC-02](use-cases/UC02-cancel-order.md#diagram-sekwencji)
+- [Diagram klas](domain/domain-model.md#diagram-klas)
+- [Diagram stanów](domain/domain-model.md#diagram-stanów)
+- [Diagram zależności](architecture/overview.md#diagram-zależności)
+- [Diagram komponentów](architecture/overview.md#diagram-komponentów)
+- [Mapowanie dokumentacji na kod](architecture/overview.md#mapowanie-dokumentacji-na-kod)
+
 ## Kiedy dodać diagram
 
 Wystarczy pięć diagramów. Każdy pojawia się wtedy, gdy tekst przestaje pokazywać relację, przepływ albo regułę.
