@@ -1,5 +1,8 @@
 # Dokumentacja projektu
 
+## Wizja
+[docs/vision.md](vision.md)
+
 ## Przypadki uzycia
 docs/use-cases
 
