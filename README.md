@@ -39,6 +39,7 @@ src/
   Domain/          model domenowy i reguły biznesowe
   Infrastructure/  szczegóły techniczne
 docs/
+  glossary.md      słownik pojęć
   use-cases/       scenariusze funkcjonalne
   architecture/    opis struktury systemu
   domain/          model domenowy

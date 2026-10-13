@@ -3,6 +3,9 @@
 ## Wizja
 [docs/vision.md](vision.md)
 
+## Słownik pojęć
+[docs/glossary.md](glossary.md)
+
 ## Przypadki uzycia
 docs/use-cases
 
